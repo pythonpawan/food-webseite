@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delivery Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="javascript" href="script.js" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Styles */
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navigation -->
+    <header class="bg-violet-500 text-white">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <span class="text-5xl font-bold hover:text-orange-300">Zaayka</span>
+        </div>
+        <nav class="flex items-center space-x-4">
+          <a href="#intro" class="text-orange-300 hover:text-white text-xl"
+            >About</a
+          >
+          <a href="#menubhai" class="text-orange-300 hover:text-white text-xl"
+            >Menu</a
+          >
+
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search"
+              class="py-1 pl-8 pr-4 rounded bg-orange-100 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <svg
+              class="w-4 h-4 absolute top-1/2 left-2 transform -translate-y-1/2 text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.707 11.293a1 1 0 010 1.414l-4 4a1 1 0 11-1.414-1.414l4-4a1 1 0 011.414 0z"
+              ></path>
+            </svg>
+          </div>
+          <a href="#" class="text-orange-300 hover:text-white text-xl">Cart</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id=" intro" class="bg-gray-100 py-20">
+      <div class="container mx-auto text-center">
+        <h1 class="text-6xl mb-4">
+          <span id="element">Welcome to Zaayka</span>
+        </h1>
+        <p class="text-lg">
+          Where culinary delights come to life! Taste the extraordinary, savor
+          the moment.
+        </p>
+        <p class="text-lg text-gray-600">
+          <mark class="text-3xl rounded bg-red-300">Order delicious food</mark>
+          from the comfort of your home!
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <style>
+      .menu-item {
+        transition: transform 0.3s ease;
+      }
+      .menu-item:hover {
+        transform: scale(1.05);
+      }
+    </style>
+    <div id="menubhai" class="container mx-auto px-4 py-8">
+      <h1 class="font-bold mb-4 text-5xl">Menu</h1>
+
+      <div
+        id="menu"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 1</h2>
+          <p class="text-gray-600 mb-2">Description of Item 1</p>
+          <p class="text-gray-800 font-semibold mb-2">$10.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 1', 10.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 2</h2>
+          <p class="text-gray-600 mb-2">Description of Item 2</p>
+          <p class="text-gray-800 font-semibold mb-2">$15.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 2', 15.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Adds to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div class="menu-item">
+          <img
+            src="WhatsApp Image 2023-06-02 at 6.44.21 PM.jpeg"
+            alt="Item 3"
+            class="mb-4 rounded"
+          />
+          <h2 class="text-lg font-medium mb-2">Item 3</h2>
+          <p class="text-gray-600 mb-2">Description of Item 3</p>
+          <p class="text-gray-800 font-semibold mb-2">$12.00</p>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="addToCart('Item 3', 12.00)"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Order Section -->
+    <section class="bg-violet-400 py-20">
+      <div class="container -mx-auto text-center">
+        <h2 class="text-4xl font-semibold text-center mb-8">
+          <button class="bg-orange-500 rounded text-white px-4 py-2">
+            Order Now
+          </button>
+        </h2>
+        <img class="mx-auto animate-" src="icons8-arrow-down-50.png" alt="" />
+        <div class="mt-8 text-center">
+          <h2 class="text-3xl font-medium mb-4">Cart</h2>
+
+          <ul id="cart-items" class="mb-4"></ul>
+          <p class="text-gray-800 font-semibold mb-2">
+            Total: <span id="cart-total">$0.00</span>
+          </p>
+          <button
+            class="bg-green-500 text-white px-4 py-2 rounded"
+            onclick="placeOrder()"
+          >
+            Place Order
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-violet-200 py-8">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-awesome mb-8 text-center">
+          Ratings and Feedback
+        </h2>
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <div class="flex items-center mb-4">
+                <div class="text-gray-800 text-lg mr-2">John Doe</div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "The food was delicious, and the delivery was super fast. Highly
+                recommended!"
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <div class="flex items-center mb-4">
+                <div class="text-gray-800 text-lg mr-2">Jane Smith</div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "Amazing service! The food arrived hot and fresh. Will
+                definitely order again."
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <div class="flex items-center mb-4">
+                <div class="text-gray-800 text-lg mr-2">Jane Smith</div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "Amazing service! The food arrived hot and fresh. Will
+                definitely order again."
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <div class="flex items-center mb-4">
+                <div class="text-gray-800 text-lg mr-2">Sarah Johnson</div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+                <div class="text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-star h-4 w-4"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.57 22 9.27 17 14.16 18.18 21 12 17.77 5.82 21 7 14.16 2 9.27 8.91 8.57 12 2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-600">
+                "The food exceeded my expectations! The flavors were incredible.
+                Highly recommend trying their dishes."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--payment integration-->
+    <form action="/process-payment" method="POST" class="max-w-sm mx-auto">
+      <div class="mb-4">
+        <label for="cardNumber" class="block text-gray-700">Card Number</label>
+        <input
+          type="text"
+          id="cardNumber"
+          name="cardNumber"
+          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label for="expiryDate" class="block text-gray-700">Expiry Date</label>
+        <input
+          type="text"
+          id="expiryDate"
+          name="expiryDate"
+          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label for="cvv" class="block text-gray-700">CVV</label>
+        <input
+          type="text"
+          id="cvv"
+          name="cvv"
+          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600"
+      >
+        Pay Now
+      </button>
+    </form>
+
+    <!----->
+
+    <!-- Track Delivery Section -->
+    <section class="py-20">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Track Your Delivery</h2>
+        <p class="text-lg text-center mb-8">
+          Enter your order ID to track your delivery status:
+        </p>
+        <div class="flex items-center max-w-md mx-auto">
+          <input
+            type="text"
+            id="orderID"
+            class="py-2 px-4 rounded-l-lg focus:outline-none"
+            placeholder="Order ID"
+          />
+          <button
+            id="trackButton"
+            class="bg-blue-500 text-white py-2 px-4 rounded-r-lg ml-2"
+          >
+            Track
+          </button>
+        </div>
+        <p id="deliveryStatus" class="text-center mt-4"></p>
+      </div>
+    </section>
+    <div
+      id="orderId"
+      class="bg-red border border-gray-300 rounded p-4 shadow"
+    ></div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 px-8">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 Food Delivery. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+        typeSpeed: 50,
+      });
+    </script>
+    <script>
+      // Add dynamic menu items
+
+      const cartItems = [];
+
+      function addToCart(itemName, itemPrice, itemDescription) {
+        const item = {
+          name: itemName,
+          price: itemPrice,
+          Description: itemDescription,
+        };
+        cartItems.push(item);
+        updateCart();
+      }
+
+      function updateCart() {
+        const cartItemsElement = document.getElementById("cart-items");
+        const cartTotalElement = document.getElementById("cart-total");
+        cartItemsElement.innerHTML = "";
+        let total = 0;
+
+        cartItems.forEach((item) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+          cartItemsElement.appendChild(listItem);
+          total += item.price;
+        });
+
+        cartTotalElement.textContent = `$${total.toFixed(2)}`;
+      }
+
+      function generateOrderId() {
+        const timestamp = Date.now().toString();
+        const randomNum = Math.floor(Math.random() * 10000)
+          .toString()
+          .padStart(4, "0");
+        return timestamp + randomNum;
+      }
+
+      function placeOrder() {
+        if (cartItems.length > 0) {
+          const orderId = generateOrderId();
+
+          alert(`Your order has been placed! Order ID: ${orderId}`);
+
+          cartItems.length = 0;
+          updateCart();
+        }
+      }
+
+      // Track delivery
+      const trackButton = document.getElementById("trackButton");
+      const deliveryStatus = document.getElementById("deliveryStatus");
+
+      trackButton.addEventListener("click", () => {
+        const orderID = document.getElementById("orderID").value;
+        if (orderID.trim() !== "") {
+          // Simulate tracking request
+          deliveryStatus.textContent = "Tracking order ID: " + orderID;
+          setTimeout(() => {
+            const random = Math.random();
+            if (random < 0.5) {
+              deliveryStatus.textContent = "Delivery in progress";
+            } else {
+              deliveryStatus.textContent = "Delivered!";
+            }
+          }, 2000);
+        } else {
+          deliveryStatus.textContent = "Please enter a valid order ID";
+        }
+      });
+    </script>
+  </body>
+</html>
